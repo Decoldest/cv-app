@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Output from "./components/Output";
-import Input from "./components/Input";
+import Output from "./Output";
+import Input from "./Output";
 
 export default function App() {
   const [info, setInfo] = useState({
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <Input info={info} setInfo={setInfo} />
-      <Output info={info} />
+      <Output info={info} setInfo={setInfo} />
     </>
   );
 }

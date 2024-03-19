@@ -1,29 +1,25 @@
-import { useState } from "react";
-
-export default function GeneralInfo({person, setPerson}) {
- 
-
+export default function GeneralInfo({ info, setInfo }) {
   const handleNameChange = (event) => {
-    const newPerson = { ...person, fullName: event.target.value };
-    setPerson(newPerson);
+    const newInfo = { ...info, fullName: event.target.value };
+    setInfo(newInfo);
   };
   const handleEmailChange = (event) => {
-    const newPerson = { ...person, address: event.target.value };
-    setPerson(newPerson);
+    const newInfo = { ...info, address: event.target.value };
+    setInfo(newInfo);
   };
   const handleAddressChange = (event) => {
-    const newPerson = { ...person, address: event.target.value };
-    setPerson(newPerson);
+    const newInfo = { ...info, address: event.target.value };
+    setInfo(newInfo);
   };
 
   return (
     <>
       <Personal
-        fullName={person.fullName}
+        fullName={info.fullName}
         nameChange={handleNameChange}
-        email={person.email}
+        email={info.email}
         emailChange={handleEmailChange}
-        address={person.address}
+        address={info.address}
         addressChange={handleAddressChange}
       ></Personal>
     </>

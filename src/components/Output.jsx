@@ -1,24 +1,11 @@
-import { useState } from "react";
-
-import GeneralInfo from './GeneralInfo'
-
-
-export default function Output() {
-  const [person, setPerson] = useState({
-    fullName: "Guy",
-    email: "mail@mail.com",
-    phone: "122-555-1556",
-    address: "11 Home Street",
-  });
+export default function Output({ info}) {
 
   return (
     <>
-    <h1>{person.fullName}</h1>
-    <GeneralInfo 
-      person={person}
-      setPerson={setPerson}
-    />
+      <h1>{info.fullName}</h1>
+      <h2>{info.email}</h2>
+      <h2>{info.phone}</h2>
+      <h2>{info.address}</h2>
     </>
-    
   );
 }
