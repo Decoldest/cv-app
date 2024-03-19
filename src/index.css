@@ -13,6 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.main-card {
+  display: flex;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -1,10 +1,11 @@
 import GeneralInfo from "./GeneralInfo";
 
-export default function Input({ info, setInfo }) {
+export default function Input({ info, setInfo, experience, setExperience }) {
   return (
     <>
-     <h1>fffsf</h1>
-      <GeneralInfo info={info} setInfo={setInfo} />
+      <div className="card">
+        <GeneralInfo info={info} setInfo={setInfo} />
+      </div>
     </>
   );
 }
