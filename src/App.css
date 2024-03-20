@@ -1,6 +1,6 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+
   padding: 2rem;
   text-align: center;
 }
@@ -11,12 +11,8 @@
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-}
-
 .main-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 450px 8.5in;
+  gap: 50px;
 }

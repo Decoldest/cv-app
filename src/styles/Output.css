@@ -1,0 +1,42 @@
+.output-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 11in;
+}
+
+.output-container>h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.output-container>h3 {
+  font-size: 14px;
+}
+
+.output-container>section {
+  margin: 0.2in 0;
+}
+
+.output-container .education-section,.experience-section {
+  display: flex;
+}
+
+.education-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex-grow: 1;
+}
+.education-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex-grow: 2;
+}
+
+.additional-details {
+  display: flex;
+  justify-content: center;
+  gap: 1in;
+}

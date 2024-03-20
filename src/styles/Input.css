@@ -3,3 +3,8 @@
   flex-direction: column;
   gap: 10px;
 }
+
+input:focus {
+  border: none;
+  outline: rgb(169, 169, 255) 1px solid;
+}

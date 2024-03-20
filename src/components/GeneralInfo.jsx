@@ -7,7 +7,8 @@ export default function GeneralInfo({ info, setInfo }) {
   };
 
   return (
-    <div className="general-container">
+    <form className="general-container">
+      <h1 className="header">General Information</h1>
       <label htmlFor="fullName">Full Name</label>
       <input
         type="text"
@@ -39,6 +40,6 @@ export default function GeneralInfo({ info, setInfo }) {
         value={info.address}
         onChange={(e) => handleInfoChange("address", e.target.value)}
       />
-    </div>
+    </form>
   );
 }
