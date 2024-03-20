@@ -1,68 +1,39 @@
-export default function Form({
+import React from "react";
+
+function Form({
   item,
-  index,
+  fields,
+  displayFields,
   handleChange,
   isEditing,
   onClick,
   onSubmit,
-  defaultDisplay,
 }) {
   return (
     <>
       {isEditing ? (
         <div>
           <form onSubmit={onSubmit}>
-            <input
-              type="text"
-              value={item.company}
-              onChange={(e) =>
-                handleChange("company", e.target.value, index)
-              }
-            />
-            <input
-              type="text"
-              value={item.position}
-              onChange={(e) =>
-                handleChange("position", e.target.value, index)
-              }
-            />
-            <input
-              type="text"
-              value={item.yearStart}
-              onChange={(e) =>
-                handleChange("yearStart", e.target.value, index)
-              }
-            />
-            <input
-              type="text"
-              value={item.yearEnd}
-              onChange={(e) =>
-                handleChange("yearEnd", e.target.value, index)
-              }
-            />
-            <input
-              type="text"
-              value={item.location}
-              onChange={(e) =>
-                handleChange("location", e.target.value, index)
-              }
-            />
-            <input
-              type="text"
-              value={item.description}
-              onChange={(e) =>
-                handleChange("description", e.target.value, index)
-              }
-            />
+            {fields.map((field) => (
+              <input
+                key={field}
+                type="text"
+                value={item[field]}
+                onChange={(e) => handleChange(field, e.target.value)}
+              />
+            ))}
             <button type="submit">Done</button>
           </form>
         </div>
       ) : (
         <div onClick={onClick}>
-          {experienceItem.company}
-          {experienceItem.position}
+          {displayFields.map((field) => (
+            <div key={field}>{item[field]}</div>
+          ))}
         </div>
       )}
     </>
   );
 }
+
+export default Form;

@@ -1,6 +1,7 @@
 import "../styles/Experience.css";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
+import Form from "./Form"
 
 export default function Experience({ experience, setExperience }) {
   const [editIndex, setEditIndex] = useState(-1);
@@ -47,10 +48,20 @@ export default function Experience({ experience, setExperience }) {
     <>
       {experience.map((exp, index) => (
         <li key={exp.id}>
-          <ExperienceForm
-            experienceItem={exp}
-            index={index}
-            handleExperienceChange={handleExperienceChange}
+          <Form 
+            item={exp}
+            fields={[
+              'company',
+              'position',
+              'yearStart',
+              'yearEnd',
+              'location',
+              'description',
+            ]}
+            displayFields={
+              ['company', 'position']
+            }
+            handleChange={(input, value) => handleExperienceChange(input, value, index)}
             isEditing={editIndex === exp.id}
             onClick={() => setEditIndex(exp.id)}
             onSubmit={handleSubmit}

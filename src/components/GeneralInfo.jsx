@@ -6,10 +6,34 @@ export default function GeneralInfo({ info, setInfo }) {
 
   return (
     <>
-      <input type="text" value={info.fullName} onChange={(e) => handleInfoChange("fullName", e.target.value)} />
-      <input type="text" value={info.email} onChange={(e) => handleInfoChange("email", e.target.value)} />
-      <input type="text" value={info.phone} onChange={(e) => handleInfoChange("phone", e.target.value)} />
-      <input type="text" value={info.address} onChange={(e) => handleInfoChange("address", e.target.value)} />
+      <label htmlFor="fullName">Full Name</label>
+      <input
+        type="text"
+        name="fullName"
+        value={info.fullName}
+        onChange={(e) => handleInfoChange("fullName", e.target.value)}
+      />
+      <label htmlFor="email">Email</label>
+      <input
+        type="text"
+        name="email"
+        value={info.email}
+        onChange={(e) => handleInfoChange("email", e.target.value)}
+      />
+      <label htmlFor="phone">Phone</label>
+      <input
+        type="text"
+        name="phone"
+        value={info.phone}
+        onChange={(e) => handleInfoChange("phone", e.target.value)}
+      />
+      <label htmlFor="address">Address</label>
+      <input
+        type="text"
+        name="address"
+        value={info.address}
+        onChange={(e) => handleInfoChange("address", e.target.value)}
+      />
     </>
   );
 }

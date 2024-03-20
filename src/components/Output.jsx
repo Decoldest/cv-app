@@ -1,4 +1,4 @@
-export default function Output({ info, experience }) {
+export default function Output({ info, experience, education }) {
   return (
     <>
       <section>
@@ -8,6 +8,16 @@ export default function Output({ info, experience }) {
           <h2>{info.phone}</h2>
           <h2>{info.address}</h2>
         </div>
+      </section>
+      <section>
+        {education.map((edu) => (
+          <div className="card" key={edu.id}>
+            <h4>{edu.school}</h4>
+            <h4>{edu.degree}</h4>
+            <h4>{edu.yearStart} {edu.yearEnd ? "-" : "" } {edu.yearEnd}</h4>
+            <h4>{edu.location}</h4>
+          </div>
+        ))}
       </section>
       <section>
         {experience.map((exp) => (

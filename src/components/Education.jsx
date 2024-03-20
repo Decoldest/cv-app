@@ -1,6 +1,7 @@
 import "../styles/Education.css";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
+import Form from "./Form"
 
 export default function Education({ education, setEducation }) {
   const [editIndex, setEditIndex] = useState(-1);
@@ -46,10 +47,19 @@ export default function Education({ education, setEducation }) {
     <>
       {education.map((edu, index) => (
         <li key={edu.id}>
-          <EducationForm
-            educationItem={edu}
-            index={index}
-            changeHandler={handleEducationChange}
+          <Form 
+            item={edu}
+            fields={[
+              'school',
+              'degree',
+              'yearStart',
+              'yearEnd',
+              'location',
+            ]}
+            displayFields={
+              ['school', 'degree']
+            }
+            handleChange={(input, value) => handleEducationChange(input, value, index)}
             isEditing={editIndex === edu.id}
             onClick={() => setEditIndex(edu.id)}
             onSubmit={handleSubmit}

@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Output from "./components/Output";
 import Input from "./components/Input";
-import { v4 as uuid } from 'uuid';
-
+import { v4 as uuid } from "uuid";
 
 const defaultGeneralInfo = {
   fullName: "Guy",
@@ -42,20 +41,24 @@ const defaultEducation = [
     location: "Quahog",
     id: uuid(),
   },
-]
+];
 
 export default function App() {
   const [info, setInfo] = useState(defaultGeneralInfo);
   const [experience, setExperience] = useState(defaultExperience);
   const [education, setEducation] = useState(defaultEducation);
 
-
   return (
     <div className="main-card">
-      <Input info={info} setInfo={setInfo} 
-        experience={experience} setExperience={setExperience} 
-        education={education} setEducation={setEducation}/>
-      <Output info={info} experience={experience} education={education}/>
+      <Input
+        info={info}
+        setInfo={setInfo}
+        education={education}
+        setEducation={setEducation}
+        experience={experience}
+        setExperience={setExperience}
+      />
+      <Output info={info} experience={experience} education={education} />
     </div>
   );
 }
