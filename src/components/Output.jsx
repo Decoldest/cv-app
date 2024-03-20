@@ -14,7 +14,7 @@ export default function Output({ info, experience }) {
           <div className="card" key={exp.id}>
             <h1>{exp.company}</h1>
             <h2>{exp.position}</h2>
-            <h2>{exp.yearStart} - {exp.yearEnd}</h2>
+            <h2>{exp.yearStart} {exp.yearEnd ? "-" : "" } {exp.yearEnd}</h2>
             <h2>{exp.location}</h2>
             <p>{exp.description}</p>
           </div>

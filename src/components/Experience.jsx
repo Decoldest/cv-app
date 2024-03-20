@@ -40,6 +40,12 @@ export default function Experience({ experience, setExperience }) {
     setEditIndex(newId);
   };
 
+  const deleteExperience = (id) => {
+    setExperience(
+      experience.filter(exp => exp.id !== id)
+    )
+  }
+
   return (
     <>
       {experience.map((exp, index) => (
@@ -52,6 +58,7 @@ export default function Experience({ experience, setExperience }) {
             onClick={() => setEditIndex(exp.id)}
             onSubmit={handleSubmit}
           />
+          <button onClick={() => deleteExperience(exp.id)}>Delete</button>
         </li>
       ))}
       {editIndex === -1 && <button onClick={addNewExperience}>Add</button>}

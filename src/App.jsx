@@ -18,7 +18,7 @@ const defaultExperience = [
     position: "Special Intelligence",
     yearStart: "01/01/1992",
     yearEnd: "12/12/2004",
-    location: "Kiev",
+    location: "Puerto Rico",
     description: "None",
     id: uuid(),
   },
