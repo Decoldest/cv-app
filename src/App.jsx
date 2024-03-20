@@ -16,8 +16,8 @@ const defaultExperience = [
   {
     company: "Classified",
     position: "Special Intelligence",
-    yearStart: "01/01/1992",
-    yearEnd: "12/12/2004",
+    yearStart: "01/1992",
+    yearEnd: "12/2004",
     location: "Puerto Rico",
     description: "None",
     id: uuid(),
@@ -25,9 +25,9 @@ const defaultExperience = [
   {
     company: "WcDonald's",
     position: "Burger Flipper",
-    yearStart: "01/02/2024",
+    yearStart: "02/2024",
     yearEnd: "present",
-    location: "WcDonald's Headquarters, Chicago, IL",
+    location: "WcDonald's Headquarters",
     description: "Flipped burgers, what else",
     id: uuid(),
   },
@@ -37,8 +37,8 @@ const defaultEducation = [
   {
     school: "State Tech Ag Central College Tech",
     degree: "Bachelors in Agriculture",
-    yearStart: "11/03/2020",
-    yearEnd: "10/04/2021",
+    yearStart: "03/2020",
+    yearEnd: "04/2021",
     location: "Quahog",
     id: uuid(),
   },

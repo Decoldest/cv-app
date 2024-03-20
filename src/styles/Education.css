@@ -1,3 +1,6 @@
+.education-container {
+  text-align: center;
+}
 
 li {
   border-radius: 10px;
@@ -17,6 +20,8 @@ li div {
 li button {
   height: 25px;
 }
+
+
 
 form div {
   margin-bottom: 15px;
