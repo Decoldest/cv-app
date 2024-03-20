@@ -1,0 +1,15 @@
+.general-container {
+  text-align: start;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+input {
+  width: 200px;
+  color: rgb(70, 70, 70);
+  background-color: rgb(237, 237, 237);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}

@@ -14,7 +14,9 @@ export default function Output({ info, experience, education }) {
           <div className="card" key={edu.id}>
             <h4>{edu.school}</h4>
             <h4>{edu.degree}</h4>
-            <h4>{edu.yearStart} {edu.yearEnd ? "-" : "" } {edu.yearEnd}</h4>
+            <h4>
+              {edu.yearStart} {edu.yearEnd ? "-" : ""} {edu.yearEnd}
+            </h4>
             <h4>{edu.location}</h4>
           </div>
         ))}
@@ -24,7 +26,9 @@ export default function Output({ info, experience, education }) {
           <div className="card" key={exp.id}>
             <h4>{exp.company}</h4>
             <h4>{exp.position}</h4>
-            <h4>{exp.yearStart} {exp.yearEnd ? "-" : "" } {exp.yearEnd}</h4>
+            <h4>
+              {exp.yearStart} {exp.yearEnd ? "-" : ""} {exp.yearEnd}
+            </h4>
             <h4>{exp.location}</h4>
             <p>{exp.description}</p>
           </div>

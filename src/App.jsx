@@ -2,6 +2,7 @@ import { useState } from "react";
 import Output from "./components/Output";
 import Input from "./components/Input";
 import { v4 as uuid } from "uuid";
+import "./App.css"
 
 const defaultGeneralInfo = {
   fullName: "Guy",
