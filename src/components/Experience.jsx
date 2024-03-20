@@ -54,7 +54,7 @@ export default function Experience({ experience, setExperience }) {
           />
         </li>
       ))}
-      <button onClick={addNewExperience}>Add</button>
+      {editIndex === -1 && <button onClick={addNewExperience}>Add</button>}
     </>
   );
 }
