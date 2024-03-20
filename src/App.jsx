@@ -22,6 +22,15 @@ const defaultExperience = [
     description: "None",
     id: uuid(),
   },
+  {
+    company: "WcDonald's",
+    position: "Burger Flipper",
+    yearStart: "01/02/2024",
+    yearEnd: "present",
+    location: "WcDonald's Headquarters, Chicago, IL",
+    description: "Flipped burgers, what else",
+    id: uuid(),
+  },
 ];
 
 const defaultEducation = [
@@ -33,14 +42,6 @@ const defaultEducation = [
     location: "Quahog",
     id: uuid(),
   },
-    // {
-  //   school: "Hogwarts",
-  //   degree: "Auror",
-  //   yearStart: "14/08/2022",
-  //   yearEnd: "Present",
-  //   location: "None",
-  //   id: uuid(),
-  // },
 ]
 
 export default function App() {

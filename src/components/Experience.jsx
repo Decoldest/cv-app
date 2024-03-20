@@ -1,8 +1,10 @@
 import "./Experience.css";
 import { useState } from "react";
+import { v4 as uuid } from "uuid";
 
 export default function Experience({ experience, setExperience }) {
   const [editIndex, setEditIndex] = useState(-1);
+  const [isAdding, setIsAdding] = useState(false);
 
   const handleExperienceChange = (input, value, index) => {
     const newExperience = experience.map((exp, i) => {
@@ -16,7 +18,26 @@ export default function Experience({ experience, setExperience }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEditIndex(-1)
+    setEditIndex(-1);
+  };
+
+  const addNewExperience = () => {
+    const newId = uuid();
+
+    setExperience([
+      ...experience,
+      {
+        company: "",
+        position: "",
+        yearStart: "",
+        yearEnd: "",
+        location: "",
+        description: "",
+        id: newId,
+      },
+    ]);
+
+    setEditIndex(newId);
   };
 
   return (
@@ -33,6 +54,7 @@ export default function Experience({ experience, setExperience }) {
           />
         </li>
       ))}
+      <button onClick={addNewExperience}>Add</button>
     </>
   );
 }
@@ -43,10 +65,10 @@ function ExperienceForm({
   handleExperienceChange,
   isEditing,
   onClick,
-  onSubmit
+  onSubmit,
 }) {
   return (
-    <section>
+    <>
       {isEditing ? (
         <div>
           <form onSubmit={onSubmit}>
@@ -101,6 +123,6 @@ function ExperienceForm({
           {experienceItem.position}
         </div>
       )}
-    </section>
+    </>
   );
 }
