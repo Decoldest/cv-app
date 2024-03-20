@@ -12,10 +12,10 @@ export default function Output({ info, experience }) {
       <section>
         {experience.map((exp) => (
           <div className="card" key={exp.id}>
-            <h1>{exp.company}</h1>
-            <h2>{exp.position}</h2>
-            <h2>{exp.yearStart} {exp.yearEnd ? "-" : "" } {exp.yearEnd}</h2>
-            <h2>{exp.location}</h2>
+            <h4>{exp.company}</h4>
+            <h4>{exp.position}</h4>
+            <h4>{exp.yearStart} {exp.yearEnd ? "-" : "" } {exp.yearEnd}</h4>
+            <h4>{exp.location}</h4>
             <p>{exp.description}</p>
           </div>
         ))}

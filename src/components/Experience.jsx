@@ -1,10 +1,9 @@
-import "./Experience.css";
+import "../styles/Experience.css";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 
 export default function Experience({ experience, setExperience }) {
   const [editIndex, setEditIndex] = useState(-1);
-  const [isAdding, setIsAdding] = useState(false);
 
   const handleExperienceChange = (input, value, index) => {
     const newExperience = experience.map((exp, i) => {
@@ -41,10 +40,8 @@ export default function Experience({ experience, setExperience }) {
   };
 
   const deleteExperience = (id) => {
-    setExperience(
-      experience.filter(exp => exp.id !== id)
-    )
-  }
+    setExperience(experience.filter((exp) => exp.id !== id));
+  };
 
   return (
     <>
@@ -61,7 +58,9 @@ export default function Experience({ experience, setExperience }) {
           <button onClick={() => deleteExperience(exp.id)}>Delete</button>
         </li>
       ))}
-      {editIndex === -1 && <button onClick={addNewExperience}>Add</button>}
+      {editIndex === -1 && (
+        <button onClick={addNewExperience}>Add Experience</button>
+      )}
     </>
   );
 }

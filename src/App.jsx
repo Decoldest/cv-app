@@ -47,11 +47,15 @@ const defaultEducation = [
 export default function App() {
   const [info, setInfo] = useState(defaultGeneralInfo);
   const [experience, setExperience] = useState(defaultExperience);
+  const [education, setEducation] = useState(defaultEducation);
+
 
   return (
     <div className="main-card">
-      <Input info={info} setInfo={setInfo} experience={experience} setExperience={setExperience}/>
-      <Output info={info} experience={experience} />
+      <Input info={info} setInfo={setInfo} 
+        experience={experience} setExperience={setExperience} 
+        education={education} setEducation={setEducation}/>
+      <Output info={info} experience={experience} education={education}/>
     </div>
   );
 }
