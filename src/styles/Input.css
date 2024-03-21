@@ -18,3 +18,18 @@ input:focus {
   flex-direction: column;
   align-items: center;
 }
+
+.education-container .dropdown, .experience-container .dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.input-container> :first-child, .input-container> :last-child{ 
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}

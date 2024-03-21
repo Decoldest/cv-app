@@ -2,6 +2,7 @@ import GeneralInfo from "./GeneralInfo";
 import Experience from "./Experience";
 import Education from "./Education";
 import Styling from "./Styling";
+import Dropdown from "./Dropdown";
 import "../styles/Input.css";
 
 export default function Input({
@@ -12,7 +13,7 @@ export default function Input({
   experience,
   setExperience,
   style,
-  setStyle
+  setStyle,
 }) {
   return (
     <>
@@ -21,13 +22,17 @@ export default function Input({
           <GeneralInfo info={info} setInfo={setInfo} />
         </div>
         <div className="education-container">
-          <Education education={education} setEducation={setEducation} />
+          <Dropdown name="Education">
+            <Education education={education} setEducation={setEducation} />
+          </Dropdown>
         </div>
         <div className="experience-container">
-          <Experience experience={experience} setExperience={setExperience} />
+          <Dropdown name="Experience">
+            <Experience experience={experience} setExperience={setExperience} />
+          </Dropdown>
         </div>
         <div className="style-container">
-          <Styling  style={style} setStyle={setStyle} />
+          <Styling style={style} setStyle={setStyle} />
         </div>
       </div>
     </>
