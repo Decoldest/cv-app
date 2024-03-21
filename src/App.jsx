@@ -48,6 +48,7 @@ export default function App() {
   const [info, setInfo] = useState(defaultGeneralInfo);
   const [experience, setExperience] = useState(defaultExperience);
   const [education, setEducation] = useState(defaultEducation);
+  const [style, setStyle] = useState("Harvard");
 
   return (
     <div className="main-card">
@@ -58,8 +59,10 @@ export default function App() {
         setEducation={setEducation}
         experience={experience}
         setExperience={setExperience}
+        style={style}
+        setStyle={setStyle}
       />
-      <Output info={info} experience={experience} education={education} />
+      <Output info={info} experience={experience} education={education} style={style} />
     </div>
   );
 }

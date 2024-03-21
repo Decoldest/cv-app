@@ -1,14 +1,10 @@
-export default function Dropdown() {
-  const handleOpen = () => {
-  
-  }
+export default function Dropdown({ name, children }) {
+  const handleOpen = () => {};
 
   return (
-    <div>
-      <button>
-        show
-      </button>
-
-    </div>
+    <>
+      <div>{name}</div>
+      <div>{children}</div>
+    </>
   );
 }

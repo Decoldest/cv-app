@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   padding: 2rem
-
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,4 +13,15 @@
   display: grid;
   grid-template-columns: 450px 8.5in;
   gap: 50px;
+}
+
+button {
+  background-color: rgb(59, 59, 113);
+  border: none;
+  border-radius: 5px;
+  padding: 4px 6px;
+}
+
+button:active {
+  background-color: rgb(33, 33, 72);
 }

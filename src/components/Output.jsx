@@ -1,7 +1,10 @@
 import "../styles/Output.css";
 
-export default function Output({ info, experience, education }) {
-  return <Harvard info={info} experience={experience} education={education} />;
+export default function Output({ info, experience, education, style }) {
+  return ( style === "Harvard" ?
+    <Harvard info={info} experience={experience} education={education} />
+    : <Modern info={info} experience={experience} education={education} />
+  );
 }
 
 function Harvard({ info, experience, education }) {
@@ -52,7 +55,7 @@ function Harvard({ info, experience, education }) {
 function Modern({ info, experience, education }) {
   return (
     <div className="output-container">
-      <section>
+      <section className="header">
         <h1 className="name">{info.fullName}</h1>
         <div className="additional-details">
           <h3>{info.email}</h3>

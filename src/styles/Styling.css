@@ -1,0 +1,15 @@
+.style-container button {
+  font-size: 18px;
+  color: black;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(221, 221, 221);
+  margin: 0 5px;
+  border-radius: 20px;
+}
+
+button.selected {
+  color: white;
+  background-color: rgb(33, 74, 176);
+  border: 2px solid rgb(94, 94, 94);
+}

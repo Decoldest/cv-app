@@ -1,6 +1,7 @@
 import GeneralInfo from "./GeneralInfo";
 import Experience from "./Experience";
 import Education from "./Education";
+import Styling from "./Styling";
 import "../styles/Input.css";
 
 export default function Input({
@@ -10,6 +11,8 @@ export default function Input({
   setEducation,
   experience,
   setExperience,
+  style,
+  setStyle
 }) {
   return (
     <>
@@ -22,6 +25,9 @@ export default function Input({
         </div>
         <div className="experience-container">
           <Experience experience={experience} setExperience={setExperience} />
+        </div>
+        <div className="style-container">
+          <Styling  style={style} setStyle={setStyle} />
         </div>
       </div>
     </>
