@@ -2,13 +2,13 @@ import { useState } from "react";
 import Output from "./components/Output";
 import Input from "./components/Input";
 import { v4 as uuid } from "uuid";
-import "./App.css"
+import "./App.css";
 
 const defaultGeneralInfo = {
   fullName: "Guy",
   email: "mail@mail.com",
   phone: "122-555-1556",
-  address: "11 Home Street",
+  address: "Schmoneyville",
   id: uuid(),
 };
 

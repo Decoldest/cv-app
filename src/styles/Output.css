@@ -32,8 +32,12 @@ h4.output-bold {
   margin: 0.2in 0;
 }
 
+.output-container h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
 .output-container .education-section,.experience-section {
-  /* margin-left: 0.75in; */
   display: flex;
 }
 
@@ -42,7 +46,7 @@ h4.output-bold {
 }
 
 .cv-content {
-  margin-left: 0.75in;
+  margin: 0.2in 0.75in;
 }
 
 .education-left, .education-right, .experience-left, .experience-right {
@@ -63,4 +67,57 @@ h4.output-bold {
   display: flex;
   justify-content: center;
   gap: 1in;
+}
+
+.additional-details-harvard h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.output-container .additional-details-harvard {
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  gap: 0.2in;
+  border-bottom: 1px solid grey;
+  padding-bottom: 0.1in;
+}
+
+.education-section.harvard, .experience-section.harvard {
+  flex-direction: column;
+}
+
+.education-harvard, .experience-harvard {
+  display: flex;
+  justify-content: space-between;
+}
+
+h4.output-bold.harvard {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.output-container .position-harvard {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.output-container .harvard p {
+  margin-left: 0.25in;
+}
+
+.output-container.harvard>* {
+  font-family: 'Times New Roman', Times, serif
+}
+
+.output-container.harvard h1 {
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 0.1in 0;
+}
+
+.output-container.harvard h2 {
+
+  margin-bottom: 0.1in;
 }
