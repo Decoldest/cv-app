@@ -27,9 +27,9 @@ input:focus {
   padding: 10px;
   border-radius: 10px;
   font-size: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.9px 2.9px 6px;
 }
 
 .input-container> :first-child, .input-container> :last-child{ 
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.9px 2.9px 6px;
 }

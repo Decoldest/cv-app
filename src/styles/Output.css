@@ -36,6 +36,7 @@ h4.output-bold {
   font-size: 20px;
   text-align: center;
   margin-bottom: 0.2in;
+  background-color: rgb(216, 216, 216);
 }
 
 .output-container .education-section,.experience-section {
@@ -123,7 +124,7 @@ h4.output-bold.harvard {
 
 .output-container .header {
   color: white;
-  background-color: rgb(129, 129, 129);
+  background-color: #5c5c9e;
   margin: 0 0 10px 0;
   padding: 0 0 25px 0;
 }
